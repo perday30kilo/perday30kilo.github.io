@@ -6,9 +6,30 @@
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sat, 11 Jul 2020 11:07:29 +0800</lastBuildDate>
     
 	<atom:link href="https://perday30kilo.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Researchmethod</title>
+      <link>https://perday30kilo.github.io/post/researchmethod/</link>
+      <pubDate>Sat, 11 Jul 2020 11:07:29 +0800</pubDate>
+      
+      <guid>https://perday30kilo.github.io/post/researchmethod/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://perday30kilo.github.io/about/</link>
+      <pubDate>Sat, 11 Jul 2020 11:07:24 +0800</pubDate>
+      
+      <guid>https://perday30kilo.github.io/about/</guid>
+      <description>每天前进30公里团队是一个聚集了一批一线互联网公司技术专家的学习团队，旨在促进大家共同学习共同进步，每天前进30公里，苦练基本功。 学习范围涵盖技术和投资。
+在技术的路上我们不敢懈怠，需要保持学习，怀着质疑的精神去吸收学习知识。
+希望我们的知识是在每天持续增长.</description>
+    </item>
     
   </channel>
 </rss>
