@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.73.0" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Server Command &middot; 每天前进三十公里</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://perday30kilo.github.io/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://perday30kilo.github.io/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://perday30kilo.github.io/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://perday30kilo.github.io/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://perday30kilo.github.io/"><h1>每天前进三十公里</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://perday30kilo.github.io/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2020. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Server Command</h1>
+  <time datetime=2020-11-19T22:52:53&#43;0800 class="post-date">Thu, Nov 19, 2020</time>
+  <h1 id="0-背景">0 背景</h1>
+<p>命令行是程序员诊断问题和分析问题的基础。</p>
+<h1 id="1-业务日志分析">1 业务日志分析</h1>
+<p>如果应用系统出现异常，一般都会在业务日志中体现
+统计当天业务日志中ERROR出现数量：egrep ERROR &ndash;color logname | wc -l  ，如果错误数量过大，一般都是有问题的
+查看日志中ERROR后10行具体报错：egrep -A 10 ERROR logname | less ，或 -C 10 查看ERROR前后10行日志</p>
+<p>按照时间段过滤日志</p>
+<pre><code>sed -n '/起始时间/,/结束时间/p' 日志文件
+sed -n '/2018-12-06 00:00:00/,/2018-12-06 00:03:00/p' logname  # 查询三分钟内的日志，后再跟grep 过滤相应关键字
+sed -n '/2018-12-06 08:38:00/,$p' logname  |  less # 查询指定时间到当前日志
+ps：禁止使用vim直接打开日志文件
+</code></pre><h1 id="2-jvm相关">2 JVM相关</h1>
+<p>名称	主要作用
+jps	JVM Process Status Tool,用来查看基于HotSpot的JVM里面中，所有具有访问权限的Java进程的具体状态, 包括进程ID，进程启动的路径及启动参数等等，与unix上的ps类似，只不过jps是用来显示java进程，可以把jps理解为ps的一个子集。
+jstat	JVM Statistics Monitoring Tool,jstat是用于监视虚拟各种运行状态信息的命令行工具，它可以显示本地或者远程虚拟机进程中的类装载、内存、垃圾收集、JIT编译等运行数据。
+jinfo	Configuration info for java，命令的作用是实时的查看和调整虚拟机的参数。
+jmap	Memory Map for java，生成虚拟机的内存转储快照(heapdump)
+jhat	JVM Heap Dump Browser，用于分析heapdump文件，它会建立一个Http/HTML服务器，让用户可以在浏览器上查看分析结果
+jstack	Stack Trace for java，显示虚拟机的线程快照。</p>
+<p>使用&ndash;help，查看命令具体使用</p>
+<p>常用：</p>
+<pre><code>jps -v
+jstat -gc 118694 500 5 
+jmap -dump:live,format=b,file=dump.hprof 29170
+jmap -heap 29170
+jmap -histo:live 29170 | more
+jmap -permstat 29170
+jstack -l 29170 |more
+</code></pre><pre><code>jstack -l pid |wc -l
+jstack -l pid |grep &quot;BLOCKED&quot;|wc -l
+jstack -l pid |grep &quot;Waiting on condition&quot;|wc -l
+
+线程block问题通常是等待io、等待网络、等待监视器锁等造成，可能会导致请求超时、造成造成线程数暴涨导致系统502等。
+假设出现这样的问题，主要是关注jstack 出来的BLOCKED、Waiting on condition、Waiting on monitor entry等状态信息。
+假设大量线程在“waiting for monitor entry”：可能是一个全局锁堵塞住了大量线程。
+假设短时间内打印的 thread dump 文件反映。随着时间流逝。waiting for monitor entry 的线程越来越多，没有降低的趋势，可能意味着某些线程在临界区里呆的时间太长了，以至于越来越多新线程迟迟无法进入临界区。
+假设大量线程在“waiting on condition”：可能是它们又跑去获取第三方资源，迟迟获取不到Response，导致大量线程进入等待状态。
+假设发现有大量的线程都处在 Wait on condition，从线程堆栈看，正等待网络读写，这可能是一个网络瓶颈的征兆，由于网络堵塞导致线程无法运行。
+</code></pre><h1 id="3-日志相关">3 日志相关</h1>
+<p><img src="command.png" alt="alt 内存分配机制">
+<img src="command2.png" alt="alt 内存分配机制"></p>
+
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>
