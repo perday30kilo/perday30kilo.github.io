@@ -22,5 +22,26 @@
 sed -n &#39;/起始时间/,/结束时间/p&#39; 日志文件 sed -n &#39;/2018-12-06 00:00:00/,/2018-12-06 00:03:00/p&#39; logname # 查询三分钟内的日志，后再跟grep 过滤相应关键字 sed -n &#39;/2018-12-06 08:38:00/,$p&#39; logname | less # 查询指定时间到当前日志 ps：禁止使用vim直接打开日志文件 2 JVM相关 名称	主要作用 jps	JVM Process Status Tool,用来查看基于HotSpot的JVM里面中，所有具有访问权限的Java进程的具体状态, 包括进程ID，进程启动的路径及启动参数等等，与unix上的ps类似，只不过jps是用来显示java进程，可以把jps理解为ps的一个子集。 jstat	JVM Statistics Monitoring Tool,jstat是用于监视虚拟各种运行状态信息的命令行工具，它可以显示本地或者远程虚拟机进程中的类装载、内存、垃圾收集、JIT编译等运行数据。 jinfo	Configuration info for java，命令的作用是实时的查看和调整虚拟机的参数。 jmap	Memory Map for java，生成虚拟机的内存转储快照(heapdump) jhat	JVM Heap Dump Browser，用于分析heapdump文件，它会建立一个Http/HTML服务器，让用户可以在浏览器上查看分析结果 jstack	Stack Trace for java，显示虚拟机的线程快照。</description>
     </item>
     
+    <item>
+      <title>Oom</title>
+      <link>https://perday30kilo.github.io/oom/</link>
+      <pubDate>Sun, 16 Aug 2020 22:16:24 +0800</pubDate>
+      
+      <guid>https://perday30kilo.github.io/oom/</guid>
+      <description>oomkiller 简介 按需分配物理页面 　很多情况下，一个进程会申请一块很大的内存，但只是用到其中的一小部分。为了避免内存的浪费，在分配页面时，Linux 采用的是按需分配物理页面的方式。譬如说，某个进程调用malloc()申请了一块小内存，这时内核会分配一个虚拟页面，但这个页面不会映射到实际的物理页面。 从图中可以看到，当程序首次访问这个虚拟页面时，会触发一个缺页异常 (page fault)。这时内核会分配一个物理页面，让虚拟页面映射到这个物理页面，同时更新进程的页表 (page table)。
+Memory Overcommit Memory Overcommit 这种按需分配物理页面的方式，可以大大节省物理内存的使用，但有时会导致 Memory Overcommit。所谓 Memory Overcommit，也就是说，所有进程使用的虚拟内存超过了系统的物理内存和交换空间的总和。默认情况下，Linux 是允许 Memory Overcommit 的。并且在大多数情况下，Memory Overcommit 也是安全的，因为很多进程只是申请了很多内存，但实际使用到的内存并不多。 但万一很多进程都使用了申请来的大部分内存，就可能导致物理内存和交换空间不够用了，这时内核的 OOM Killer 就会出马，它会选择杀掉一个或多个进程，这样就能腾出一些内存给其它进程使用。 在 Linux 中，可以通过内核参数vm.overcommit_memory去控制是否允许 overcommit：
+默认值是 0，在这种情况下，只允许轻微的 overcommit，而比较明显的 overcommit 将不被允许。 如果设置为 1，表示总是允许 overcommit。 如果设置为 2，则表示总是禁止 overcommit。也就是说，如果某个申请内存的操作将导致 overcommit，那么这个操作将不会得逞。 那么对内核来说，怎样才算 overcommit 呢？Linux 设定了一个阈值，叫做 CommitLimit，如果所有进程申请的总内存超过了 CommitLimit，那就算是 overcommit 了。在/proc/meminfo中可以看到 CommitLimit 的大小：
+1 2 $ cat /proc/meminfo | grep CommitLimit CommitLimit: 3829768 kB 　CommitLimit 的值是这样计算的：</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://perday30kilo.github.io/about/</link>
+      <pubDate>Tue, 07 Jul 2020 23:53:03 +0800</pubDate>
+      
+      <guid>https://perday30kilo.github.io/about/</guid>
+      <description>每天前进三十公里，苦练基本功。 本博客由具有多年一线互联网经验的多位技术专家根据自身积累维护，仅供学习和参考。 大家一起学习一起打怪升级~~~</description>
+    </item>
+    
   </channel>
 </rss>
