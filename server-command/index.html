@@ -91,8 +91,8 @@ jstack -l pid |grep &quot;Waiting on condition&quot;|wc -l
 假设大量线程在“waiting on condition”：可能是它们又跑去获取第三方资源，迟迟获取不到Response，导致大量线程进入等待状态。
 假设发现有大量的线程都处在 Wait on condition，从线程堆栈看，正等待网络读写，这可能是一个网络瓶颈的征兆，由于网络堵塞导致线程无法运行。
 </code></pre><h1 id="3-日志相关">3 日志相关</h1>
-<p><img src="command.png" alt="alt 内存分配机制">
-<img src="command2.png" alt="alt 内存分配机制"></p>
+<p><img src="https://perday30kilo.github.io/command.png" alt="alt 内存分配机制">
+<img src="https://perday30kilo.github.io/command2.png" alt="alt 内存分配机制"></p>
 
 </div>
 
