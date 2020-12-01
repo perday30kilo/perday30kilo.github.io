@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.73.0" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sentinel &middot; 每天前进三十公里</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://perday30kilo.github.io/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://perday30kilo.github.io/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://perday30kilo.github.io/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://perday30kilo.github.io/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://perday30kilo.github.io/"><h1>每天前进三十公里</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://perday30kilo.github.io/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2020. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Sentinel</h1>
+  <time datetime=2020-11-26T23:32:11&#43;0800 class="post-date">Thu, Nov 26, 2020</time>
+  <h1 id="1-sentinel是什么">1 Sentinel是什么</h1>
+<p>主要特性<br>
+<img src="https://perday30kilo.github.io/sentinel1.png" alt="alt 主要特性"><br>
+开源生态<br>
+<img src="https://perday30kilo.github.io/sentinel2.png" alt="alt 开源生态"> <br>
+Sentinel 分为两个部分:</p>
+<p>核心库（Java 客户端）不依赖任何框架/库，能够运行于所有 Java 运行时环境，同时对 Dubbo / Spring Cloud 等框架也有较好的支持。
+控制台（Dashboard）基于 Spring Boot 开发，打包后可以直接运行，不需要额外的 Tomcat 等应用容器。</p>
+<h1 id="2-quick-start">2 Quick Start</h1>
+<h2 id="21-sentinel-dashboard">2.1 Sentinel Dashboard</h2>
+<pre><code>java -Dserver.port=8080 -Dcsp.sentinel.dashboard.server=localhost:8080 -Dproject.name=sentinel-dashboard -jar sentinel-dashboard.jar
+</code></pre><p>从 Sentinel 1.6.0 起，Sentinel 控制台引入基本的登录功能，默认用户名和密码都是 sentinel</p>
+<h2 id="22-如何使用">2.2 如何使用</h2>
+<p>我们说的资源，可以是任何东西，服务，服务里的方法，甚至是一段代码。使用 Sentinel 来进行资源保护，主要分为几个步骤:</p>
+<p>1 定义资源<br>
+2 定义规则<br>
+3 检验规则是否生效</p>
+<p>先把可能需要保护的资源定义好（埋点），之后再配置规则。也可以理解为，只要有了资源，我们就可以在任何时候灵活地定义各种流量控制规则。在编码的时候，只需要考虑这个代码是否需要保护，如果需要保护，就将之定义为一个资源。</p>
+<p>返回布尔值方式定义资源</p>
+
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>
