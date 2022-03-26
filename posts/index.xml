@@ -1,0 +1,49 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>所有文章 - 我的全新 Hugo 网站</title>
+        <link>https://perday30kilo.github.io/posts/</link>
+        <description>所有文章 | 我的全新 Hugo 网站</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 25 Mar 2022 22:26:17 &#43;0800</lastBuildDate><atom:link href="https://perday30kilo.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>关于</title>
+    <link>https://perday30kilo.github.io/about/</link>
+    <pubDate>Fri, 25 Mar 2022 21:57:40 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://perday30kilo.github.io/about/</guid>
+    <description><![CDATA[关于我]]></description>
+</item><item>
+    <title>First_post</title>
+    <link>https://perday30kilo.github.io/first_post/</link>
+    <pubDate>Fri, 25 Mar 2022 22:26:17 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://perday30kilo.github.io/first_post/</guid>
+    <description><![CDATA[LoveIt]]></description>
+</item><item>
+    <title>Ddd Practice1</title>
+    <link>https://perday30kilo.github.io/ddd-practice1/</link>
+    <pubDate>Tue, 01 Dec 2020 23:18:14 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://perday30kilo.github.io/ddd-practice1/</guid>
+    <description><![CDATA[1 DDD工作坊实操 十个步骤，依次为： 确定利益相关人 确定业务期望和愿景 对问题域的共同理解 确定项目的业务范围 确定业务流程 史诗级故事和主故事 运用用]]></description>
+</item><item>
+    <title>Sentinel</title>
+    <link>https://perday30kilo.github.io/sentinel/</link>
+    <pubDate>Thu, 26 Nov 2020 23:32:11 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://perday30kilo.github.io/sentinel/</guid>
+    <description><![CDATA[1 Sentinel是什么 主要特性 开源生态 Sentinel 分为两个部分: 核心库（Java 客户端）不依赖任何框架/库，能够运行于所有 Java 运行时环境，同时对 Dubbo / Spring]]></description>
+</item><item>
+    <title>Server Command</title>
+    <link>https://perday30kilo.github.io/server-command/</link>
+    <pubDate>Thu, 19 Nov 2020 22:52:53 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://perday30kilo.github.io/server-command/</guid>
+    <description><![CDATA[0 背景 命令行是程序员诊断问题和分析问题的基础。 1 业务日志分析 如果应用系统出现异常，一般都会在业务日志中体现 统计当天业务日志中ERROR出现数]]></description>
+</item><item>
+    <title>Oom</title>
+    <link>https://perday30kilo.github.io/oom/</link>
+    <pubDate>Sun, 16 Aug 2020 22:16:24 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://perday30kilo.github.io/oom/</guid>
+    <description><![CDATA[oomkiller 简介 按需分配物理页面 很多情况下，一个进程会申请一块很大的内存，但只是用到其中的一小部分。为了避免内存的浪费，在分配页面时，Linux 采用的]]></description>
+</item></channel>
+</rss>

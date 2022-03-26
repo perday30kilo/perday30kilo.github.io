@@ -1,61 +1,139 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
-<head>
-  <link href="https://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.73.0" />
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Oom - 我的全新 Hugo 网站</title><meta name="Description" content="这是我的全新 Hugo 网站"><meta property="og:title" content="Oom" />
+<meta property="og:description" content="oomkiller 简介 按需分配物理页面 很多情况下，一个进程会申请一块很大的内存，但只是用到其中的一小部分。为了避免内存的浪费，在分配页面时，Linux 采用的" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://perday30kilo.github.io/oom/" /><meta property="og:image" content="https://perday30kilo.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-08-16T22:16:24+08:00" />
+<meta property="article:modified_time" content="2020-08-16T22:16:24+08:00" />
 
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://perday30kilo.github.io/logo.png"/>
 
-  <title>Oom &middot; 每天前进三十公里</title>
-  <meta name="description" content="" />
+<meta name="twitter:title" content="Oom"/>
+<meta name="twitter:description" content="oomkiller 简介 按需分配物理页面 很多情况下，一个进程会申请一块很大的内存，但只是用到其中的一小部分。为了避免内存的浪费，在分配页面时，Linux 采用的"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://perday30kilo.github.io/oom/" /><link rel="next" href="https://perday30kilo.github.io/server-command/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Oom",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/perday30kilo.github.io\/oom\/"
+        },"genre": "posts","wordcount":  2855 ,
+        "url": "https:\/\/perday30kilo.github.io\/oom\/","datePublished": "2020-08-16T22:16:24+08:00","dateModified": "2020-08-16T22:16:24+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "xxxx"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
-  
-  <link type="text/css" rel="stylesheet" href="https://perday30kilo.github.io/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://perday30kilo.github.io/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://perday30kilo.github.io/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://perday30kilo.github.io/css/hyde.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
-
-
-  
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
-
-  
-  
-</head>
-
-  <body class=" ">
-  <aside class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <a href="https://perday30kilo.github.io/"><h1>每天前进三十公里</h1></a>
-      <p class="lead">
-      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
-      </p>
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="我的全新 Hugo 网站"></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
     </div>
-
-    <nav>
-      <ul class="sidebar-nav">
-        <li><a href="https://perday30kilo.github.io/">Home</a> </li>
-        
-      </ul>
-    </nav>
-
-    <p>&copy; 2020. All rights reserved. </p>
-  </div>
-</aside>
-
-    <main class="content container">
-    <div class="post">
-  <h1>Oom</h1>
-  <time datetime=2020-08-16T22:16:24&#43;0800 class="post-date">Sun, Aug 16, 2020</time>
-  <h1 id="oomkiller-简介">oomkiller 简介</h1>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="我的全新 Hugo 网站"></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Oom</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>xxxx</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-08-16">2020-08-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2855 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#按需分配物理页面">按需分配物理页面</a></li>
+    <li><a href="#memory-overcommit">Memory Overcommit</a></li>
+    <li><a href="#oom-killer">OOM Killer</a></li>
+    <li><a href="#排查命令">排查命令</a></li>
+    <li><a href="#heading"></a></li>
+    <li><a href="#找出最有可能被-oom-killer-杀掉的进程">找出最有可能被 OOM Killer 杀掉的进程</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="oomkiller-简介">oomkiller 简介</h1>
 <h2 id="按需分配物理页面">按需分配物理页面</h2>
 <p>　　很多情况下，一个进程会申请一块很大的内存，但只是用到其中的一小部分。为了避免内存的浪费，在分配页面时，Linux 采用的是按需分配物理页面的方式。譬如说，某个进程调用malloc()申请了一块小内存，这时内核会分配一个虚拟页面，但这个页面不会映射到实际的物理页面。
-<img src="oom1.png" alt="alt 内存分配机制">
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="oom1.png"
+        data-srcset="oom1.png, oom1.png 1.5x, oom1.png 2x"
+        data-sizes="auto"
+        alt="oom1.png"
+        title="alt 内存分配机制" />
 　　从图中可以看到，当程序首次访问这个虚拟页面时，会触发一个缺页异常 (page fault)。这时内核会分配一个物理页面，让虚拟页面映射到这个物理页面，同时更新进程的页表 (page table)。</p>
 <h2 id="memory-overcommit">Memory Overcommit</h2>
 <p>Memory Overcommit
@@ -66,23 +144,49 @@
 如果设置为 1，表示总是允许 overcommit。
 如果设置为 2，则表示总是禁止 overcommit。也就是说，如果某个申请内存的操作将导致 overcommit，那么这个操作将不会得逞。
 　　那么对内核来说，怎样才算 overcommit 呢？Linux 设定了一个阈值，叫做 CommitLimit，如果所有进程申请的总内存超过了 CommitLimit，那就算是 overcommit 了。在/proc/meminfo中可以看到 CommitLimit 的大小：</p>
-<pre><code>1
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">1
 2
 $ cat /proc/meminfo | grep CommitLimit
 CommitLimit:     3829768 kB
-</code></pre><p>　CommitLimit 的值是这样计算的：</p>
-<pre><code>CommitLimit = [swap size] + [RAM size] * vm.overcommit_ratio / 100
+</code></pre></td></tr></table>
+</div>
+</div><p>　CommitLimit 的值是这样计算的：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">CommitLimit = [swap size] + [RAM size] * vm.overcommit_ratio / 100
 
-</code></pre><p>　其中的vm.overcommit_ratio也是内核参数，它的默认值是 50。</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>　其中的vm.overcommit_ratio也是内核参数，它的默认值是 50。</p>
 <h2 id="oom-killer">OOM Killer</h2>
-<p>　当物理内存和交换空间不够用时，OOM Killer 就会选择杀死进程，那么它是怎样知道要先杀死哪个进程呢？其实 Linux 的每个进程都有一个 oom_score (位于/proc/<!-- raw HTML omitted -->/oom_score)，这个值越大，就越有可能被 OOM Killer 选中。oom_score 的值是由很多因素共同决定的，这里列举几个因素：</p>
+<p>　当物理内存和交换空间不够用时，OOM Killer 就会选择杀死进程，那么它是怎样知道要先杀死哪个进程呢？其实 Linux 的每个进程都有一个 oom_score (位于/proc/<pid>/oom_score)，这个值越大，就越有可能被 OOM Killer 选中。oom_score 的值是由很多因素共同决定的，这里列举几个因素：</p>
 <p>如果进程消耗的内存越大，它的 oom_score 通常也会越大。
 如果进程运行了很长时间，并且消耗很多 CPU 时间，那么通常它的 oom_score 会偏小。
 如果进程以 superuser 的身份运行，那么它的 oom_score 也会偏小。
-　　如何才能尽量防止某个重要的进程被杀死呢？Linux 每个进程都有一个 oom_adj (位于/proc/<!-- raw HTML omitted -->/oom_adj)，这个值的范围是 [-17, +15]，进程的 oom_adj 会影响 oom_score 的计算，也就是说，我们可以通过调小进程的 oom_adj 从而降低进程的 oom_score。对于一些比较重要的进程，例如 MySQL，我们想尽量避免它被 OOM Killer 杀死，这时候就可以调低它的 oom_adj 的值，例如：</p>
-<pre><code>$ sudo echo -10 &gt; /proc/$(pidof mysqld)/oom_adj
+　　如何才能尽量防止某个重要的进程被杀死呢？Linux 每个进程都有一个 oom_adj (位于/proc/<pid>/oom_adj)，这个值的范围是 [-17, +15]，进程的 oom_adj 会影响 oom_score 的计算，也就是说，我们可以通过调小进程的 oom_adj 从而降低进程的 oom_score。对于一些比较重要的进程，例如 MySQL，我们想尽量避免它被 OOM Killer 杀死，这时候就可以调低它的 oom_adj 的值，例如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo echo -10 &gt; /proc/$(pidof mysqld)/oom_adj
 
-</code></pre><p>交换空间
+</code></pre></td></tr></table>
+</div>
+</div><p>交换空间
 　　通常来说操作系统都会开启交换空间，那么交换空间有什么作用呢？</p>
 <p>允许系统将一些长期没有用到的物理页面换出到交换空间，这样就能节省物理内存的使用。
 当物理内存不够使用时，系统可以利用交换空间作为缓冲，防止一些进程因为内存不够而被 OOM Killer 杀死。
@@ -91,17 +195,90 @@ CommitLimit:     3829768 kB
 设置为 1 不会禁止交换空间的使用，但系统会尽量不去使用交换空间。
 设置为 100 表示系统会很喜欢使用交换空间。
 　　交换空间是位于磁盘之上的，对操作系统来说，访问磁盘的速度远远慢于访问物理内存。所以我们希望，当物理内存足够使用时，系统能尽量不去使用交换空间，这样能降低页面换入换出的频率，因为频繁的页面换入换出操作会严重影响系统的性能。为了达到这种效果，我们可以把vm.swappiness设置为 1：</p>
-<pre><code>	
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">	
 sudo echo 1 &gt;  /proc/sys/vm/swappiness
 
-</code></pre><h2 id="排查命令">排查命令</h2>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="排查命令">排查命令</h2>
 <p>dmesg
 如果发现自己的java进程悄无声息的消失了，几乎没有留下任何线索，那么dmesg一发，很有可能有你想要的。</p>
-<pre><code>sudo dmesg|grep -i kill|less
-</code></pre><h2 id="heading"></h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo dmesg|grep -i kill|less
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="heading"></h2>
 <p>Linux 内核根据应用程序的要求分配内存，通常来说应用程序分配了内存但是并没有实际全部使用，为了提高性能，这部分没用的内存可以留作它用，这部分内存是属于每个进程的，内核直接回收利用的话比较麻烦，所以内核采用一种过度分配内存（over-commit memory）的办法来间接利用这部分 “空闲” 的内存，提高整体内存的使用效率。一般来说这样做没有问题，但当大多数应用程序都消耗完自己的内存的时候麻烦就来了，因为这些应用程序的内存需求加起来超出了物理内存（包括 swap）的容量，内核（OOM killer）必须杀掉一些进程才能腾出空间保障系统正常运行。用银行的例子来讲可能更容易懂一些，部分人取钱的时候银行不怕，银行有足够的存款应付，当全国人民（或者绝大多数）都取钱而且每个人都想把自己钱取完的时候银行的麻烦就来了，银行实际上是没有这么多钱给大家取的。</p>
 <p>内核检测到系统内存不足、挑选并杀掉某个进程的过程可以参考内核源代码 linux/mm/oom_kill.c ，当系统内存不足的时候，out_of_memory() 被触发，然后调用 select_bad_process() 选择一个 “bad” 进程杀掉，如何判断和选择一个 “bad” 进程呢，总不能随机选吧？挑选的过程由 oom_badness() 决定，挑选的算法和想法都很简单很朴实：最 bad 的那个进程就是那个最占用内存的进程。</p>
-<pre><code>/**
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">/**
  * oom_badness - heuristic function to determine which candidate task to kill
  * @p: task struct of which task we should calculate
  * @totalpages: total present RAM allowed for page allocation
@@ -131,7 +308,7 @@ unsigned long oom_badness(struct task_struct *p, struct mem_cgroup *memcg,
 
 	/*
 	 * The baseline for the badness score is the proportion of RAM that each
-	 * task's rss, pagetable and swap space use.
+	 * task&#39;s rss, pagetable and swap space use.
 	 */
 	points = get_mm_rss(p-&amp;gt;mm) + p-&amp;gt;mm-&amp;gt;nr_ptes +
 		 get_mm_counter(p-&amp;gt;mm, MM_SWAPENTS);
@@ -150,48 +327,120 @@ unsigned long oom_badness(struct task_struct *p, struct mem_cgroup *memcg,
 
 	/*
 	 * Never return 0 for an eligible task regardless of the root bonus and
-	 * oom_score_adj (oom_score_adj can't be OOM_SCORE_ADJ_MIN here).
+	 * oom_score_adj (oom_score_adj can&#39;t be OOM_SCORE_ADJ_MIN here).
 	 */
 	return points &amp;gt; 0 ? points : 1;
 }
-</code></pre><p>从上面的 oom_kill.c 代码里可以看到 oom_badness() 给每个进程打分，根据 points 的高低来决定杀哪个进程，这个 points 可以根据 adj 调节，root 权限的进程通常被认为很重要，不应该被轻易杀掉，所以打分的时候可以得到 3% 的优惠（adj -= 30; 分数越低越不容易被杀掉）。我们可以在用户空间通过操作每个进程的 oom_adj 内核参数来决定哪些进程不这么容易被 OOM killer 选中杀掉。比如，如果不想 MySQL 进程被轻易杀掉的话可以找到 MySQL 运行的进程号后，调整 oom_score_adj 为 -15（注意 points 越小越不容易被杀）：</p>
-<pre><code># ps aux | grep mysqld
+</code></pre></td></tr></table>
+</div>
+</div><p>从上面的 oom_kill.c 代码里可以看到 oom_badness() 给每个进程打分，根据 points 的高低来决定杀哪个进程，这个 points 可以根据 adj 调节，root 权限的进程通常被认为很重要，不应该被轻易杀掉，所以打分的时候可以得到 3% 的优惠（adj -= 30; 分数越低越不容易被杀掉）。我们可以在用户空间通过操作每个进程的 oom_adj 内核参数来决定哪些进程不这么容易被 OOM killer 选中杀掉。比如，如果不想 MySQL 进程被轻易杀掉的话可以找到 MySQL 运行的进程号后，调整 oom_score_adj 为 -15（注意 points 越小越不容易被杀）：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># ps aux | grep mysqld
 mysql    2196  1.6  2.1 623800 44876 ?        Ssl  09:42   0:00 /usr/sbin/mysqld
 
 # cat /proc/2196/oom_score_adj
 0
 # echo -15 &amp;gt; /proc/2196/oom_score_adj
-</code></pre><h2 id="找出最有可能被-oom-killer-杀掉的进程">找出最有可能被 OOM Killer 杀掉的进程</h2>
-<pre><code># vi oomscore.sh
-#!/bin/bash
-for proc in $(find /proc -maxdepth 1 -regex '/proc/[0-9]+'); do
-    printf &quot;%2d %5d %s\n&quot; \
-        &quot;$(cat $proc/oom_score)&quot; \
-        &quot;$(basename $proc)&quot; \
-        &quot;$(cat $proc/cmdline | tr '\0' ' ' | head -c 50)&quot;
-done 2&amp;gt;/dev/null | sort -nr | head -n 10
-
-# chmod +x oomscore.sh
-# ./oomscore.sh
-18   981 /usr/sbin/mysqld
- 4 31359 -bash
- 4 31056 -bash
- 1 31358 sshd: root@pts/6
- 1 31244 sshd: vpsee [priv]
- 1 31159 -bash
- 1 31158 sudo -i
- 1 31055 sshd: root@pts/3
- 1 30912 sshd: vpsee [priv]
- 1 29547 /usr/sbin/sshd -D
-</code></pre><h1 id="linux里哪些命令会出发oom-killer">linux里哪些命令会出发oom killer</h1>
-
+</code></pre></td></tr></table>
 </div>
+</div><h2 id="找出最有可能被-oom-killer-杀掉的进程">找出最有可能被 OOM Killer 杀掉的进程</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># vi oomscore.sh</span>
+<span class="c1">#!/bin/bash</span>
+<span class="k">for</span> proc in <span class="k">$(</span>find /proc -maxdepth <span class="m">1</span> -regex <span class="s1">&#39;/proc/[0-9]+&#39;</span><span class="k">)</span><span class="p">;</span> <span class="k">do</span>
+    <span class="nb">printf</span> <span class="s2">&#34;%2d %5d %s\n&#34;</span> <span class="se">\
+</span><span class="se"></span>        <span class="s2">&#34;</span><span class="k">$(</span>cat <span class="nv">$proc</span>/oom_score<span class="k">)</span><span class="s2">&#34;</span> <span class="se">\
+</span><span class="se"></span>        <span class="s2">&#34;</span><span class="k">$(</span>basename <span class="nv">$proc</span><span class="k">)</span><span class="s2">&#34;</span> <span class="se">\
+</span><span class="se"></span>        <span class="s2">&#34;</span><span class="k">$(</span>cat <span class="nv">$proc</span>/cmdline <span class="p">|</span> tr <span class="s1">&#39;\0&#39;</span> <span class="s1">&#39; &#39;</span> <span class="p">|</span> head -c 50<span class="k">)</span><span class="s2">&#34;</span>
+<span class="k">done</span> 2<span class="p">&amp;</span>gt<span class="p">;</span>/dev/null <span class="p">|</span> sort -nr <span class="p">|</span> head -n <span class="m">10</span>
 
+<span class="c1"># chmod +x oomscore.sh</span>
+<span class="c1"># ./oomscore.sh</span>
+<span class="m">18</span>   <span class="m">981</span> /usr/sbin/mysqld
+ <span class="m">4</span> <span class="m">31359</span> -bash
+ <span class="m">4</span> <span class="m">31056</span> -bash
+ <span class="m">1</span> <span class="m">31358</span> sshd: root@pts/6
+ <span class="m">1</span> <span class="m">31244</span> sshd: vpsee <span class="o">[</span>priv<span class="o">]</span>
+ <span class="m">1</span> <span class="m">31159</span> -bash
+ <span class="m">1</span> <span class="m">31158</span> sudo -i
+ <span class="m">1</span> <span class="m">31055</span> sshd: root@pts/3
+ <span class="m">1</span> <span class="m">30912</span> sshd: vpsee <span class="o">[</span>priv<span class="o">]</span>
+ <span class="m">1</span> <span class="m">29547</span> /usr/sbin/sshd -D
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="linux里哪些命令会出发oom-killer">linux里哪些命令会出发oom killer</h1>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2020-08-16</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/oom/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://perday30kilo.github.io/oom/" data-title="Oom" data-via="xxxx"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://perday30kilo.github.io/oom/"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://perday30kilo.github.io/oom/" data-title="Oom" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://perday30kilo.github.io/oom/" data-title="Oom"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://perday30kilo.github.io/oom/" data-title="Oom"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://perday30kilo.github.io/oom/" data-title="Oom" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://perday30kilo.github.io/oom/" data-title="Oom" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://perday30kilo.github.io/oom/" data-title="Oom"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
 
-    </main>
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
 
-    
-      
-    
-  </body>
+    <div class="post-nav">
+            <a href="/server-command/" class="next" rel="next" title="Server Command">Server Command<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>
