@@ -2,15 +2,18 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://perday30kilo.github.io/about/</loc><lastmod>2022-03-25T21:57:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://perday30kilo.github.io/posts/</loc><lastmod>2022-04-17T23:53:08&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://perday30kilo.github.io/stock0417/</loc><lastmod>2022-04-17T23:53:08&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://perday30kilo.github.io/</loc><lastmod>2022-04-17T23:53:08&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://perday30kilo.github.io/first_post/</loc><lastmod>2022-03-25T22:26:17&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://perday30kilo.github.io/tags/about/</loc><lastmod>2022-03-25T21:57:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://perday30kilo.github.io/categories/about/</loc><lastmod>2022-03-25T21:57:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://perday30kilo.github.io/categories/</loc><lastmod>2022-03-25T21:57:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>https://perday30kilo.github.io/tags/</loc><lastmod>2022-03-25T21:57:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://perday30kilo.github.io/about/</loc><lastmod>2022-03-25T21:57:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://perday30kilo.github.io/ddd-evans-01/</loc><lastmod>2022-05-03T21:38:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://perday30kilo.github.io/categories/</loc><lastmod>2022-05-03T21:38:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://perday30kilo.github.io/tags/ddd/</loc><lastmod>2022-05-03T21:38:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://perday30kilo.github.io/categories/ddd/</loc><lastmod>2022-05-03T21:38:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://perday30kilo.github.io/posts/</loc><lastmod>2022-05-03T21:38:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://perday30kilo.github.io/tags/</loc><lastmod>2022-05-03T21:38:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://perday30kilo.github.io/</loc><lastmod>2022-05-03T21:38:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://perday30kilo.github.io/stock0417/</loc><lastmod>2022-04-17T23:53:08&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>https://perday30kilo.github.io/first_post/</loc><lastmod>2022-03-25T22:26:17&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://perday30kilo.github.io/tags/about/</loc><lastmod>2022-03-25T21:57:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://perday30kilo.github.io/categories/about/</loc><lastmod>2022-03-25T21:57:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://perday30kilo.github.io/ddd-practice1/</loc><lastmod>2020-12-01T23:18:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://perday30kilo.github.io/sentinel/</loc><lastmod>2020-11-26T23:32:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://perday30kilo.github.io/server-command/</loc><lastmod>2020-11-19T22:52:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
