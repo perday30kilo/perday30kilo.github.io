@@ -20,7 +20,7 @@
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://perday30kilo.github.io/ddd-evans-01/" /><link rel="prev" href="https://perday30kilo.github.io/stock0417/" /><link rel="next" href="https://perday30kilo.github.io/about/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://perday30kilo.github.io/ddd-evans-01/" /><link rel="prev" href="https://perday30kilo.github.io/ddd-practice1/" /><link rel="next" href="https://perday30kilo.github.io/about/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/perday30kilo.github.io\/ddd-evans-01\/"
-        },"genre": "posts","keywords": "DDD","wordcount":  0 ,
+        },"genre": "posts","keywords": "DDD","wordcount":  1027 ,
         "url": "https:\/\/perday30kilo.github.io\/ddd-evans-01\/","datePublished": "2022-05-03T21:38:11+08:00","dateModified": "2022-05-03T21:38:11+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -106,22 +106,76 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">重读领域驱动设计1-6章</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://perday30kilo.github.io/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>孔老哥</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/ddd/"><i class="far fa-folder fa-fw"></i>DDD</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-05-03">2022-05-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 0 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 0 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-05-03">2022-05-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1027 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><p><img
+            </div><div class="content" id="content"><h1 id="对统一语言的理解">对统一语言的理解</h1>
+<p><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="https://perday30kilo.github.io/img/ddd-evans--1.png"
-        data-srcset="https://perday30kilo.github.io/img/ddd-evans--1.png, https://perday30kilo.github.io/img/ddd-evans--1.png 1.5x, https://perday30kilo.github.io/img/ddd-evans--1.png 2x"
+        data-src="https://perday30kilo.github.io/posts/img/ddd-evans-01.png"
+        data-srcset="https://perday30kilo.github.io/posts/img/ddd-evans-01.png, https://perday30kilo.github.io/posts/img/ddd-evans-01.png 1.5x, https://perday30kilo.github.io/posts/img/ddd-evans-01.png 2x"
         data-sizes="auto"
-        alt="https://perday30kilo.github.io/img/ddd-evans--1.png"
+        alt="https://perday30kilo.github.io/posts/img/ddd-evans-01.png"
         title="alt 个人理解" /></p>
+<h1 id="对于沟通">对于沟通</h1>
+<p>图是一种沟通和解释的手段，可以促进头脑风暴，简洁的小图能给很好的实现这些目标，涵盖整个对象模型的综合性大图反而是去了沟通或者解释能力，它会让读者淹没在大量细节之中。我们应该避免使用包罗万象的对象模型图，应该使用简化的图，图中只包含对象模型的重要概念。</p>
+<h1 id="model-driven-design">Model Driven Design</h1>
+<p>分析模型和程序设计之间的联系在很多情况下会招到破坏，整个程序设计或者核心部分没有与领域模型相对应，那么这个模型就是没有价值的，软件的正确性也值得怀疑。   <br>
+Model Driven Design 提倡的不再将分析模型和程序设计分离开，而是寻求一种能够满足这方面需求的单一模型。即实现所谓的模型和实现的绑定。这也是DDD的核心。
+绑定分析模型和实现是可行的，但是我们不能因为技术考虑而去削弱分析的功能，也不能因为领域模型舍弃了软件设计的基本原则。</p>
+<p>Hands-On Modeler: 设计模型的人一定要亲身参与编码或者了解编码实现遇到的问题，反过来，负责实现代码的工程师也要理解模型，使用统一语言去讨论模型在实现上的问题。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://perday30kilo.github.io/posts/img/ddd-evans-02.png"
+        data-srcset="https://perday30kilo.github.io/posts/img/ddd-evans-02.png, https://perday30kilo.github.io/posts/img/ddd-evans-02.png 1.5x, https://perday30kilo.github.io/posts/img/ddd-evans-02.png 2x"
+        data-sizes="auto"
+        alt="https://perday30kilo.github.io/posts/img/ddd-evans-02.png"
+        title="alt 个人理解" /></p>
+<h1 id="分离领域">分离领域</h1>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://perday30kilo.github.io/posts/img/ddd-evans-03.png"
+        data-srcset="https://perday30kilo.github.io/posts/img/ddd-evans-03.png, https://perday30kilo.github.io/posts/img/ddd-evans-03.png 1.5x, https://perday30kilo.github.io/posts/img/ddd-evans-03.png 2x"
+        data-sizes="auto"
+        alt="https://perday30kilo.github.io/posts/img/ddd-evans-03.png"
+        title="alt 分离领域" /></p>
+<p>将领域层分离开的目的是不让业务核心逻辑（领域）和具体的技术实现绑定在一起。</p>
+<h1 id="entity-和-value-object">Entity 和 Value Object</h1>
+<p>Enttiy和valueobject本质区别：
+entity是用来表示具有连续性和标识的事物，可以追踪它所经历的不同状态，甚至可以跨不同实现跟踪它。</p>
+<p>valueobject是描述某种状态的属性</p>
+<p>Service：领域中有些方面适合用动作或者操作来表示，这比用对象更加清楚，这些最好用Service来表示。</p>
+<h1 id="aggregate">Aggregate</h1>
+<p>在具有复杂关联的模型中，要想保证对象更改的一致性是很困难的， Aggregate就是一组相关对象的集合，我们把他作为数据修改的单元，每个Aggregate都有一个根和一个边界。
+典型的聚合的例子是：车辆，轮胎的例子。
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://perday30kilo.github.io/posts/img/ddd-evans-04.webp"
+        data-srcset="https://perday30kilo.github.io/posts/img/ddd-evans-04.webp, https://perday30kilo.github.io/posts/img/ddd-evans-04.webp 1.5x, https://perday30kilo.github.io/posts/img/ddd-evans-04.webp 2x"
+        data-sizes="auto"
+        alt="https://perday30kilo.github.io/posts/img/ddd-evans-04.webp"
+        title="alt 分离领域" /></p>
+<h1 id="factory">Factory</h1>
+<p>对象的创建本身可以是一个主要动作，但被创建的对象并不适合承担复杂的装配操作，将这些职责混在一起可能产生难以理解的拙劣设计。让客户直接去创建对象又会使得客户的设计陷入混乱，并破坏了Aggregate的封装，从而导致客户与被创建的对象的实现之间产生紧密的耦合。
+Factory是正解。</p>
+<h1 id="repository">Repository</h1>
+<p>Repository是一个简单的封装概念，用来封装数据库检索技术，让我们将注意力拉回到模型上。   <br>
+在概念层次上与领域模型紧密联系在一起。<br>
+优点：</p>
+<ol>
+<li>为客户提供了一个简单的模型，可以用来获取持久化对象并管理他们的生命周期</li>
+<li>它使应用程序和领域设计和数据库持久化技术解耦</li>
+</ol>
+<p>注意： Repository一般不会去开启事务，而是将事务的控制权留给客户。即客户在应用层去控制。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -147,7 +201,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/stock0417/" class="prev" rel="prev" title="Stock0417"><i class="fas fa-angle-left fa-fw"></i>Stock0417</a>
+    <div class="post-nav"><a href="/ddd-practice1/" class="prev" rel="prev" title="Ddd Practice1"><i class="fas fa-angle-left fa-fw"></i>Ddd Practice1</a>
             <a href="/about/" class="next" rel="next" title="关于">关于<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"></div></article></div>

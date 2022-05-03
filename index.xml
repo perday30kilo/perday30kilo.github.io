@@ -18,7 +18,21 @@
     <pubDate>Tue, 03 May 2022 21:38:11 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://perday30kilo.github.io/ddd-evans-01/</guid>
-    <description><![CDATA[重读领域驱动设计1-6章]]></description>
+    <description><![CDATA[对统一语言的理解 对于沟通 图是一种沟通和解释的手段，可以促进头脑风暴，简洁的小图能给很好的实现这些目标，涵盖整个对象模型的综合性大图反而是去了]]></description>
+</item><item>
+    <title>Ddd Practice1</title>
+    <link>https://perday30kilo.github.io/ddd-practice1/</link>
+    <pubDate>Tue, 01 Dec 2020 23:18:14 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://perday30kilo.github.io/ddd-practice1/</guid>
+    <description><![CDATA[1 DDD工作坊实操 十个步骤，依次为： 确定利益相关人 确定业务期望和愿景 对问题域的共同理解 确定项目的业务范围 确定业务流程 史诗级故事和主故事 运用用]]></description>
+</item><item>
+    <title>Oom</title>
+    <link>https://perday30kilo.github.io/oom/</link>
+    <pubDate>Sun, 16 Aug 2020 22:16:24 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://perday30kilo.github.io/oom/</guid>
+    <description><![CDATA[oomkiller 简介 按需分配物理页面 很多情况下，一个进程会申请一块很大的内存，但只是用到其中的一小部分。为了避免内存的浪费，在分配页面时，Linux 采用的]]></description>
 </item><item>
     <title>Stock0417</title>
     <link>https://perday30kilo.github.io/stock0417/</link>
@@ -34,13 +48,6 @@
     <guid>https://perday30kilo.github.io/first_post/</guid>
     <description><![CDATA[LoveIt]]></description>
 </item><item>
-    <title>Ddd Practice1</title>
-    <link>https://perday30kilo.github.io/ddd-practice1/</link>
-    <pubDate>Tue, 01 Dec 2020 23:18:14 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://perday30kilo.github.io/ddd-practice1/</guid>
-    <description><![CDATA[1 DDD工作坊实操 十个步骤，依次为： 确定利益相关人 确定业务期望和愿景 对问题域的共同理解 确定项目的业务范围 确定业务流程 史诗级故事和主故事 运用用]]></description>
-</item><item>
     <title>Sentinel</title>
     <link>https://perday30kilo.github.io/sentinel/</link>
     <pubDate>Thu, 26 Nov 2020 23:32:11 &#43;0800</pubDate>
@@ -54,12 +61,5 @@
     <author>作者</author>
     <guid>https://perday30kilo.github.io/server-command/</guid>
     <description><![CDATA[0 背景 命令行是程序员诊断问题和分析问题的基础。 1 业务日志分析 如果应用系统出现异常，一般都会在业务日志中体现 统计当天业务日志中ERROR出现数]]></description>
-</item><item>
-    <title>Oom</title>
-    <link>https://perday30kilo.github.io/oom/</link>
-    <pubDate>Sun, 16 Aug 2020 22:16:24 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://perday30kilo.github.io/oom/</guid>
-    <description><![CDATA[oomkiller 简介 按需分配物理页面 很多情况下，一个进程会申请一块很大的内存，但只是用到其中的一小部分。为了避免内存的浪费，在分配页面时，Linux 采用的]]></description>
 </item></channel>
 </rss>

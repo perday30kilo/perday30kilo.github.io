@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>线上问题 - 分类 - 我的全新 Hugo 网站</title>
+        <link>https://perday30kilo.github.io/categories/%E7%BA%BF%E4%B8%8A%E9%97%AE%E9%A2%98/</link>
+        <description>线上问题 - 分类 - 我的全新 Hugo 网站</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 16 Aug 2020 22:16:24 &#43;0800</lastBuildDate><atom:link href="https://perday30kilo.github.io/categories/%E7%BA%BF%E4%B8%8A%E9%97%AE%E9%A2%98/" rel="self" type="application/rss+xml" /><item>
+    <title>Oom</title>
+    <link>https://perday30kilo.github.io/oom/</link>
+    <pubDate>Sun, 16 Aug 2020 22:16:24 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://perday30kilo.github.io/oom/</guid>
+    <description><![CDATA[oomkiller 简介 按需分配物理页面 很多情况下，一个进程会申请一块很大的内存，但只是用到其中的一小部分。为了避免内存的浪费，在分配页面时，Linux 采用的]]></description>
+</item></channel>
+</rss>
