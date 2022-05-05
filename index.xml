@@ -3,7 +3,7 @@
         <title>我的全新 Hugo 网站</title>
         <link>https://perday30kilo.github.io/</link>
         <description>孔老哥出品</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 03 May 2022 21:38:11 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 05 May 2022 23:52:42 &#43;0800</lastBuildDate>
             <atom:link href="https://perday30kilo.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>关于</title>
@@ -33,6 +33,13 @@
     <author>作者</author>
     <guid>https://perday30kilo.github.io/oom/</guid>
     <description><![CDATA[oomkiller 简介 按需分配物理页面 很多情况下，一个进程会申请一块很大的内存，但只是用到其中的一小部分。为了避免内存的浪费，在分配页面时，Linux 采用的]]></description>
+</item><item>
+    <title>Stock 220505</title>
+    <link>https://perday30kilo.github.io/stock-220505/</link>
+    <pubDate>Thu, 05 May 2022 23:52:42 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://perday30kilo.github.io/stock-220505/</guid>
+    <description><![CDATA[情绪面 游资参与度不高 敏感度很高 今天是回光返照的意思了 结合外围明天不是太乐观 市场的情绪主要看 湖南发展 浙江建投 徐家汇三支票 现在题材有点多 反而是坏]]></description>
 </item><item>
     <title>Stock0417</title>
     <link>https://perday30kilo.github.io/stock0417/</link>
