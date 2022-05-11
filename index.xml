@@ -3,7 +3,7 @@
         <title>我的全新 Hugo 网站</title>
         <link>https://perday30kilo.github.io/</link>
         <description>孔老哥出品</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 09 May 2022 23:56:35 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 12 May 2022 00:32:46 &#43;0800</lastBuildDate>
             <atom:link href="https://perday30kilo.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>关于</title>
@@ -33,6 +33,13 @@
     <author>作者</author>
     <guid>https://perday30kilo.github.io/oom/</guid>
     <description><![CDATA[oomkiller 简介 按需分配物理页面 很多情况下，一个进程会申请一块很大的内存，但只是用到其中的一小部分。为了避免内存的浪费，在分配页面时，Linux 采用的]]></description>
+</item><item>
+    <title>220511复盘</title>
+    <link>https://perday30kilo.github.io/stock-220511/</link>
+    <pubDate>Thu, 12 May 2022 00:32:46 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://perday30kilo.github.io/stock-220511/</guid>
+    <description><![CDATA[思路 思路要打开 板块龙头不死 大盘气氛良好的时候 大胆的去做低位的补涨和中军 对龙头低开要低吸 只要认准是龙头 核不死就是机会 情绪面 主线光伏 光伏正在扩散]]></description>
 </item><item>
     <title>Stock 220509</title>
     <link>https://perday30kilo.github.io/stock-220509/</link>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://perday30kilo.github.io/sentinel/</guid>
     <description><![CDATA[1 Sentinel是什么 主要特性 开源生态 Sentinel 分为两个部分: 核心库（Java 客户端）不依赖任何框架/库，能够运行于所有 Java 运行时环境，同时对 Dubbo / Spring]]></description>
-</item><item>
-    <title>Server Command</title>
-    <link>https://perday30kilo.github.io/server-command/</link>
-    <pubDate>Thu, 19 Nov 2020 22:52:53 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://perday30kilo.github.io/server-command/</guid>
-    <description><![CDATA[0 背景 命令行是程序员诊断问题和分析问题的基础。 1 业务日志分析 如果应用系统出现异常，一般都会在业务日志中体现 统计当天业务日志中ERROR出现数]]></description>
 </item></channel>
 </rss>
